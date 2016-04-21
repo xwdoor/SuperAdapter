@@ -1,6 +1,6 @@
 package net.xwdoor.remoteservice.net;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.res.XmlResourceParser;
 
 import net.xwdoor.remoteservice.R;
@@ -20,11 +20,10 @@ import java.util.ArrayList;
 public class UrlConfigManager {
     private static ArrayList<UrlData> urlList;
 
-    private static void fetchUrlDataFromXml(final Activity activity) {
-        urlList = new ArrayList<UrlData>();
+    private static void fetchUrlDataFromXml(final Context context) {
+        urlList = new ArrayList<>();
 
-        final XmlResourceParser xmlParser = activity.getApplication()
-                .getResources().getXml(R.xml.url);
+        final XmlResourceParser xmlParser = context.getResources().getXml(R.xml.url);
 
         int eventCode;
         try {
@@ -59,10 +58,10 @@ public class UrlConfigManager {
         }
     }
 
-    public static UrlData findURL(final Activity activity,final String findKey) {
+    public static UrlData findURL(final Context context,final String findKey) {
         // 如果urlList还没有数据（第一次），或者被回收了，那么（重新）加载xml
         if (urlList == null || urlList.isEmpty())
-            fetchUrlDataFromXml(activity);
+            fetchUrlDataFromXml(context);
 
         for (UrlData data : urlList) {
             if (findKey.equals(data.getKey())) {
