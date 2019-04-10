@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import net.xwdoor.superadapter.adapter.IViewItemBindData;
-import net.xwdoor.superadapter.adapter.SuperAdapter;
-import net.xwdoor.superadapter.adapter.SuperViewHolder;
+import net.xwdoor.superadapter.listviewadapter.IViewItemBindData;
+import net.xwdoor.superadapter.listviewadapter.SuperAdapter;
+import net.xwdoor.superadapter.listviewadapter.SuperViewHolder;
 import net.xwdoor.superadapter.mock.MockModel;
 
 import java.util.ArrayList;

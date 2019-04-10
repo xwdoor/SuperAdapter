@@ -1,4 +1,4 @@
-package net.xwdoor.superadapter.adapter;
+package net.xwdoor.superadapter.listviewadapter;
 
 /**
  * Created by XWdoor on 2016/4/15 015 12:53.

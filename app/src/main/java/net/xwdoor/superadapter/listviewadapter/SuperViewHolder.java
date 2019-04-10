@@ -1,4 +1,4 @@
-package net.xwdoor.superadapter.adapter;
+package net.xwdoor.superadapter.listviewadapter;
 
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
